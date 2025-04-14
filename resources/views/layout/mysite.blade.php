@@ -40,10 +40,10 @@
                         <a href="#service" class="nav-item nav-link">Service</a>
                         <a href="#experience" class="nav-item nav-link">Experience</a>
                         <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
-                        <a href="#price" class="nav-item nav-link">Price</a>
+
                         <a href="#review" class="nav-item nav-link">Review</a>
-                        <a href="#team" class="nav-item nav-link">Team</a>
-                        <a href="#blog" class="nav-item nav-link">Blog</a>
+
+
                         <a href="#contact" class="nav-item nav-link">Contact</a>
                     </div>
                 </div>
@@ -60,9 +60,9 @@
                         <div class="hero-content">
                             <div class="hero-text">
                                 <p>I'm</p>
-                                <h1>Kate Winslet</h1>
+                                <h1>Williams Samuel</h1>
                                 <h2></h2>
-                                <div class="typed-text">Web Designer, Web Developer, Front End Developer, Apps Designer, Apps Developer</div>
+                                <div class="typed-text">PHP Web Developer</div>
                             </div>
                             <div class="hero-btn">
                                 <a class="btn" href="">Hire Me</a>
@@ -72,7 +72,7 @@
                     </div>
                     <div class="col-sm-12 col-md-6 d-none d-md-block">
                         <div class="hero-image">
-                            <img src="img/hero.png" alt="Hero Image">
+                            <img src="img/refined.jpg" alt="Hero Image">
                         </div>
                     </div>
                 </div>
