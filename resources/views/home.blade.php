@@ -5,7 +5,7 @@
     <div class="container">
         <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
             <p>My Portfolio</p>
-            <h2>My Excellent Portfolio</h2>
+            
         </div>
         <div class="row">
             <div class="col-12">

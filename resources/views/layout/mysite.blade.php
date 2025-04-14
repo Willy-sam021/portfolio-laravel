@@ -28,7 +28,7 @@
         <!-- Nav Bar Start -->
         <div class="navbar navbar-expand-lg bg-light navbar-light">
             <div class="container-fluid">
-                <a href="index.html" class="navbar-brand">DevFolio</a>
+                <a href="index.html" class="navbar-brand">Whilzz</a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -72,7 +72,7 @@
                     </div>
                     <div class="col-sm-12 col-md-6 d-none d-md-block">
                         <div class="hero-image">
-                            <img src="img/refined.jpg" alt="Hero Image">
+                            <img src="img/refined.jpg " class='rounded-circle img-fluid'alt="Hero Image">
                         </div>
                     </div>
                 </div>
@@ -173,11 +173,11 @@
             <div class="container-fluid">
                 <div class="container">
                     <div class="footer-info">
-                        <h2>Kate Winslet</h2>
-                        <h3>123 Street, New York, USA</h3>
+                        <h2>Williams Samuel</h2>
+                        <h3>18, Awonusi Street Alagbado Lagos, Nigeria</h3>
                         <div class="footer-menu">
-                            <p>+012 345 67890</p>
-                            <p>info@example.com</p>
+                            <p>+234 8145030083</p>
+                            <p>s.o.williams021@gmail.com.com</p>
                         </div>
                         <div class="footer-social">
                             <a href=""><i class="fab fa-twitter"></i></a>
@@ -189,7 +189,7 @@
                     </div>
                 </div>
                 <div class="container copyright">
-                    <p>&copy; <a href="#">Your Site Name</a>, All Right Reserved |
+                    <p>&copy; <a href="#">Williamssamuel.com</a>, All Right Reserved |
 
 					<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                     {{-- Designed By <a href="https://htmlcodex.com">HTML Codex</a></p> --}}
