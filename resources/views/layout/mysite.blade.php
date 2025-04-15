@@ -85,7 +85,7 @@
         @yield('about')
         <!-- About End -->
 
-
+        @yield('skills')
         <!-- Service Start -->
         @yield('service')        <!-- Service End -->
 
@@ -133,22 +133,35 @@
                         <div class="col-md-8">
                             <div class="contact-form">
                                 <div id="success"></div>
-                                <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                                <form action='{{Route('myform')}}' method='post'>
+                                    @csrf
                                     <div class="control-group">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
+                                        <input type="text" class="form-control" name='fullname' id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
                                         <p class="help-block"></p>
+                                        @error('fullname')
+                                        <p class='alert-danger'>{{$message}}</p>
+                                        @enderror
                                     </div>
                                     <div class="control-group">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
+                                        <input type="email" class="form-control" name='email' id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
                                         <p class="help-block"></p>
+                                        @error('email')
+                                        <p class='alert-danger'>{{$message}}</p>
+                                        @enderror
                                     </div>
                                     <div class="control-group">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
+                                        <input type="text" class="form-control" name='title' id="subject" placeholder="Title" required="required" data-validation-required-message="Please enter a subject" />
                                         <p class="help-block"></p>
+                                        @error('title')
+                                        <p class='alert-danger'>{{$message}}</p>
+                                        @enderror
                                     </div>
                                     <div class="control-group">
-                                        <textarea class="form-control" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
+                                        <textarea class="form-control" name='message' id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
                                         <p class="help-block"></p>
+                                        @error('message')
+                                        <p class='alert-danger'>{{$message}}</p>
+                                        @enderror
                                     </div>
                                     <div>
                                         <button class="btn" type="submit" id="sendMessageButton">Send Message</button>
