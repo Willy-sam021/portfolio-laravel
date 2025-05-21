@@ -1,0 +1,45 @@
+services:
+  - type: web
+    name: laravel-portfolio
+    env: php
+    plan: free
+    branch: main
+    buildCommand: |
+      composer install --no-dev
+      php artisan config:clear
+    startCommand: php artisan serve --host=0.0.0.0 --port=10000
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: false
+      - key: APP_URL
+        value: https://laravel-portfolio.onrender.com
+      - key: APP_KEY
+        generateValue: true
+      # Uncomment below if using SQLite:
+      # - key: DB_CONNECTION
+      #   value: sqlite
+      # - key: DB_DATABASE
+      #   value: database/database.sqlite
+      # Uncomment below if using PostgreSQL:
+      # - key: DB_CONNECTION
+      #   value: pgsql
+      # - key: DB_HOST
+      #   fromDatabase:
+      #     name: your-database-name
+      #     property: host
+      # - key: DB_PORT
+      #   value: 5432
+      # - key: DB_DATABASE
+      #   fromDatabase:
+      #     name: your-database-name
+      #     property: database
+      # - key: DB_USERNAME
+      #   fromDatabase:
+      #     name: your-database-name
+      #     property: user
+      # - key: DB_PASSWORD
+      #   fromDatabase:
+      #     name: your-database-name
+      #     property: password
