@@ -9,6 +9,8 @@
 
         <!-- Favicon -->
         <link href="/favicon.ico" rel="icon">
+        <link href="/main.css" rel="stylesheet">
+        <link href="/fontawesome/css/all.css" rel="stylesheet">
         <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
         <!-- Google Font -->
         <link href="{{url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap')}}" rel="stylesheet">
@@ -22,26 +24,34 @@
 
         <!-- Template Stylesheet -->
         <link href="/css/style.css" rel="stylesheet">
+        
+        {{-- fonts --}}
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
 
     <body data-spy="scroll" data-target=".navbar" data-offset="51">
         <!-- Nav Bar Start -->
         <div class="navbar navbar-expand-lg bg-light navbar-light">
             <div class="container-fluid">
-                <a href="index.html" class="navbar-brand">Whilzz</a>
+                <div>
+                    <img src="/img/logo.png"  width='80px' alt="">
+                </div>
+             <a href="index.html" class="navbar-brand">Willy-sam</a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto">
-                        <a href="#home" class="nav-item nav-link active">Home</a>
+                        <a href="/home" class="nav-item nav-link active">Home</a>
                         <a href="#about" class="nav-item nav-link">About</a>
-                        <a href="#service" class="nav-item nav-link">Service</a>
-                        <a href="#experience" class="nav-item nav-link">Experience</a>
+                        <a href="#skill" class="nav-item nav-link">Skills</a>
+                        <a href="#project" class="nav-item nav-link">Project</a>
                         <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
 
-                        <a href="#review" class="nav-item nav-link">Review</a>
+                        <a href="#resume" class="nav-item nav-link">Resume</a>
 
 
                         <a href="#contact" class="nav-item nav-link">Contact</a>
@@ -63,10 +73,12 @@
                                 <h1>Williams Samuel</h1>
                                 <h2></h2>
                                 <div class="typed-text">PHP Web Developer</div>
+
                             </div>
+                            <h2 class='text-light small'><i>Welcome to my Portfolio</i></h2>
                             <div class="hero-btn">
-                                <a class="btn" href="">Hire Me</a>
-                                <a class="btn" href="">Contact Me</a>
+                                {{-- <a class="btn" href="">Hire Me</a> --}}
+                                <a class="btn" href="#contact">Contact Me</a>
                             </div>
                         </div>
                     </div>
@@ -84,6 +96,10 @@
         <!-- About Start -->
         @yield('about')
         <!-- About End -->
+
+        <!-- Banner Start -->
+        @yield('resume')        <!-- Banner End -->
+
 
         @yield('skills')
         <!-- Service Start -->
@@ -105,8 +121,6 @@
         <!-- Portfolio End -->
 
 
-        <!-- Banner Start -->
-        @yield('discount')        <!-- Banner End -->
 
 
         <!-- Price Start -->
@@ -124,85 +138,34 @@
         <!-- Team End -->
 
 
-        <!-- Contact Start -->
-        <div class="contact wow fadeInUp" data-wow-delay="0.1s" id="contact">
-            <div class="container-fluid">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-md-4"></div>
-                        <div class="col-md-8">
-                            <div class="contact-form">
-                                <div id="success"></div>
-                                <form action='{{Route('myform')}}' method='post'>
-                                    @csrf
-                                    <div class="control-group">
-                                        <input type="text" class="form-control" name='fullname' id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
-                                        <p class="help-block"></p>
-                                        @error('fullname')
-                                        <p class='alert-danger'>{{$message}}</p>
-                                        @enderror
-                                    </div>
-                                    <div class="control-group">
-                                        <input type="email" class="form-control" name='email' id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
-                                        <p class="help-block"></p>
-                                        @error('email')
-                                        <p class='alert-danger'>{{$message}}</p>
-                                        @enderror
-                                    </div>
-                                    <div class="control-group">
-                                        <input type="text" class="form-control" name='title' id="subject" placeholder="Title" required="required" data-validation-required-message="Please enter a subject" />
-                                        <p class="help-block"></p>
-                                        @error('title')
-                                        <p class='alert-danger'>{{$message}}</p>
-                                        @enderror
-                                    </div>
-                                    <div class="control-group">
-                                        <textarea class="form-control" name='message' id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
-                                        <p class="help-block"></p>
-                                        @error('message')
-                                        <p class='alert-danger'>{{$message}}</p>
-                                        @enderror
-                                    </div>
-                                    <div>
-                                        <button class="btn" type="submit" id="sendMessageButton">Send Message</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Contact End -->
 
 
         <!-- Blog Start -->
         @yield('blog')
         <!-- Blog End -->
 
+        {{-- contact  --}}
+        @yield('contact')
 
         <!-- Footer Start -->
         <div class="footer wow fadeIn" data-wow-delay="0.3s">
-            <div class="container-fluid">
+            <div class="container-fluid" id='contact'>
                 <div class="container">
                     <div class="footer-info">
                         <h2>Williams Samuel</h2>
                         <h3>18, Awonusi Street Alagbado Lagos, Nigeria</h3>
                         <div class="footer-menu">
                             <p>+234 8145030083</p>
-                            <p>s.o.williams021@gmail.com.com</p>
+                            <p>s.o.williams021@gmail.com</p>
                         </div>
                         <div class="footer-social">
-                            <a href=""><i class="fab fa-twitter"></i></a>
-                            <a href=""><i class="fab fa-facebook-f"></i></a>
-                            <a href=""><i class="fab fa-youtube"></i></a>
-                            <a href=""><i class="fab fa-instagram"></i></a>
-                            <a href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/Willy-sam021"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://linkedin.com/in/williams-samuel"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="container copyright">
-                    <p>&copy; <a href="#">Williamssamuel.com</a>, All Right Reserved |
+                    <p>Williams &copy;2025</p>
 
 					<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                     {{-- Designed By <a href="https://htmlcodex.com">HTML Codex</a></p> --}}
